@@ -1,0 +1,79 @@
+
+name: Jupyter Book Bilingual GitHub Pages Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout
+      - uses: actions/checkout@v6
+
+      # 2. Setup Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      # 3. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 18.x
+
+      # 4. Install Jupyter Book 2
+      - name: Install Jupyter Book
+        run: npm install -g jupyter-book
+
+      # 5. Build English edition
+      - name: Build English
+        working-directory: tutorial/en
+        env:
+          BASE_URL: /${{ github.event.repository.name }}/en
+        run: jupyter-book build --html
+
+      # 6. Build Chinese edition
+      - name: Build Chinese
+        working-directory: tutorial/zh
+        env:
+          BASE_URL: /${{ github.event.repository.name }}/zh
+        run: jupyter-book build --html
+
+      # 7. Merge both editions
+      - name: Prepare website
+        run: |
+          mkdir -p site/en site/zh
+            
+          # Copy English edition
+          cp -r tutorial/en/_build/html/. site/en/
+            
+          # Copy Chinese edition
+          cp -r tutorial/zh/_build/html/. site/zh/
+            
+          # Copy root homepage
+          cp index.html site/index.html
+          cp favicon.ico site/favicon.ico
+          cp logo.png site/logo.png
+
+      # 8. Upload artifact
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      # 9. Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

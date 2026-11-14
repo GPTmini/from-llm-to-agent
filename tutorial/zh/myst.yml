@@ -1,0 +1,29 @@
+version: 1
+project:
+  id: 2ff361ef-200a-4e6a-be05-725c77a3866d
+  title: 从大模型到智能体
+  authors:
+    - name: 李晓光（Steven Li）
+      # orcid: https://orcid.org/0000-0002-8713-2343
+  # license:
+  # description:
+  # keywords: []
+  github: https://github.com/gptmini/from-llm-to-agent
+  toc:
+    - file: index.md
+    - title: 大模型 API 与智能体循环
+      children:
+        - file: 01-llm-api-and-agent-loop/01-openai-api.ipynb
+        - file: 01-llm-api-and-agent-loop/02-llm-provider.ipynb
+        - file: 01-llm-api-and-agent-loop/03-message.ipynb
+        - file: 01-llm-api-and-agent-loop/04-agent.ipynb
+    - title: 对话与记忆
+    - title: 工具调用与 MCP
+    - title: 检索增强与长期记忆
+    - title: 推理与规划
+    - title: 多智能体
+site:
+  template: book-theme
+  options:
+    favicon: favicon.ico
+    logo: logo.png
