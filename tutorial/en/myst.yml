@@ -11,12 +11,12 @@ project:
   github: https://github.com/gptmini/from-llm-to-agent
   toc:
     - file: index.md
-    - title: LLM API and Agent Loop
-    - title: Conversation and Memory
-    - title: Function Calling and MCP
-    - title: RAG
-    - title: Reasoning and Planning
-    - title: Multi-Agent
+#    - title: LLM API and Agent Loop
+#    - title: Conversation and Memory
+#    - title: Function Calling and MCP
+#    - title: RAG
+#    - title: Reasoning and Planning
+#    - title: Multi-Agent
 site:
   template: book-theme
   options:
