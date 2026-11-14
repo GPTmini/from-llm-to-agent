@@ -1,0 +1,24 @@
+version: 1
+project:
+  id: 2ff361ef-200a-4e6a-be05-725c77a3866d
+  title: From LLM to Agent
+  authors:
+    - name: 李晓光（Steven Li）
+      # orcid: https://orcid.org/0000-0002-8713-2343
+  # license:
+  # description:
+  # keywords: []
+  github: https://github.com/gptmini/from-llm-to-agent
+  toc:
+    - file: index.md
+    - title: LLM API and Agent Loop
+    - title: Conversation and Memory
+    - title: Function Calling and MCP
+    - title: RAG
+    - title: Reasoning and Planning
+    - title: Multi-Agent
+site:
+  template: book-theme
+  options:
+    favicon: favicon.ico
+    logo: logo.png
