@@ -11,7 +11,7 @@ project:
   github: https://github.com/gptmini/from-llm-to-agent
   toc:
     - file: index.md
-    - title: 大模型 API 与智能体循环
+    - title: 大模型 API 与消息循环
       children:
         - file: 01-llm-api-and-agent-loop/01-openai-api.ipynb
         - file: 01-llm-api-and-agent-loop/02-llm-provider.ipynb
