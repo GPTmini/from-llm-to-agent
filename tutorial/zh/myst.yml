@@ -20,6 +20,9 @@ project:
     - title: 对话与记忆
       children:
         - file: 02-conversation-and-memory/05-memory.ipynb
+        - file: 02-conversation-and-memory/06-memory-summarize.ipynb
+        - file: 02-conversation-and-memory/07-persistence.ipynb
+        - file: 02-conversation-and-memory/08-stream.ipynb
 #    - title: 工具调用与 MCP
 #    - title: 检索增强生成
 #    - title: 推理与规划
