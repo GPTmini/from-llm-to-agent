@@ -17,7 +17,9 @@ project:
         - file: 01-llm-api-and-agent-loop/02-llm-provider.ipynb
         - file: 01-llm-api-and-agent-loop/03-message.ipynb
         - file: 01-llm-api-and-agent-loop/04-agent.ipynb
-#    - title: 对话与记忆
+    - title: 对话与记忆
+      children:
+        - file: 02-conversation-and-memory/05-memory.ipynb
 #    - title: 工具调用与 MCP
 #    - title: 检索增强生成
 #    - title: 推理与规划
@@ -26,3 +28,4 @@ site:
   template: book-theme
   options:
     favicon: favicon.ico
+    logo: logo.png
