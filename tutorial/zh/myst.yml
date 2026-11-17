@@ -29,9 +29,25 @@ project:
         - file: 03-function-calling-and-mcp/10-tool-loop.ipynb
         - file: 03-function-calling-and-mcp/11-tool-registry.ipynb
         - file: 03-function-calling-and-mcp/12-mcp-connection.ipynb
-#    - title: 检索增强生成
-#    - title: 推理与规划
-#    - title: 多智能体
+    - title: 检索增强生成
+      children:
+        - file: 04-rag/13-embedding.ipynb
+        - file: 04-rag/14-chunking-index.ipynb
+        - file: 04-rag/15-rag.ipynb
+        - file: 04-rag/16-long-term-memory.ipynb
+    - title: 推理与规划
+      children:
+        - file: 05-reasoning-and-planning/17-chain-of-thought.ipynb
+        - file: 05-reasoning-and-planning/18-reasoning-models.ipynb
+        - file: 05-reasoning-and-planning/19-planning.ipynb
+        - file: 05-reasoning-and-planning/20-reflection.ipynb
+    - title: 多智能体
+      children:
+        - file: 06-multi-agent/21-workflows.ipynb
+        - file: 06-multi-agent/22-multi-agent.ipynb
+        - file: 06-multi-agent/23-safety.ipynb
+        - file: 06-multi-agent/24-reliability.ipynb
+    - file: agent-survey.md
 site:
   template: book-theme
   options:
