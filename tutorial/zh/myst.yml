@@ -23,7 +23,12 @@ project:
         - file: 02-conversation-and-memory/06-memory-summarize.ipynb
         - file: 02-conversation-and-memory/07-persistence.ipynb
         - file: 02-conversation-and-memory/08-stream.ipynb
-#    - title: 工具调用与 MCP
+    - title: 工具调用与 MCP
+      children:
+        - file: 03-function-calling-and-mcp/09-tool-call.ipynb
+        - file: 03-function-calling-and-mcp/10-tool-loop.ipynb
+        - file: 03-function-calling-and-mcp/11-tool-registry.ipynb
+        - file: 03-function-calling-and-mcp/12-mcp-connection.ipynb
 #    - title: 检索增强生成
 #    - title: 推理与规划
 #    - title: 多智能体
